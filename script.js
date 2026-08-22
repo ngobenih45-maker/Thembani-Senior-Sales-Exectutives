@@ -188,3 +188,43 @@ reviews[current].classList.add("active");
 
 
 },4000);
+function recommend(){
+
+let choice =
+document.getElementById("need").value;
+
+
+let result="";
+
+
+if(choice==="family"){
+
+result="Recommended: OMODA C5 - Spacious, safe and comfortable.";
+
+}
+
+else if(choice==="luxury"){
+
+result="Recommended: JAECOO J7 - Premium technology and style.";
+
+}
+
+else if(choice==="economy"){
+
+result="Recommended: OMODA C5 Hybrid - Efficient and modern.";
+
+}
+
+else{
+
+result="Please select your driving needs.";
+
+}
+
+
+document.getElementById(
+"answer"
+).innerHTML=result;
+
+
+}
