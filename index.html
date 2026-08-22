@@ -141,7 +141,26 @@
   </main>
 
   <footer><div class="footer-brand">OMODA <i></i> JAECOO <small>BOKSBURG · THEMBANI</small></div><div>© <span id="year"></span> Thembani. Independent sales contact for OMODA & JAECOO Boksburg.</div><a href="#top">Back to top ↑</a></footer>
-
+<html><head><title>Thembani Finance Calculator</title></head>
+<body>
+<h1>Finance Calculator</h1>
+<select id="vehicle"><option>OMODA C5</option><option>OMODA C7</option><option>JAECOO J7</option><option>JAECOO J8</option></select>
+<input id="price" placeholder="Vehicle price">
+<input id="deposit" placeholder="Deposit">
+<input id="months" value="72">
+<button onclick="calculate()">Calculate</button>
+<h2 id="result"></h2>
+<script src="finance.js"></script>
+  
+<!-- Trade-in lead capture module -->
+  <h1>Trade-in</h1>
+<form id="tradeIn">
+<label>Vehicle Make</label><input name="make">
+<label>Model</label><input name="model">
+<label>Year</label><input name="year">
+<label>Mileage</label><input name="mileage">
+<button>Request valuation</button>
+</form>
   <a href="#" class="floating-wa" data-wa="general" aria-label="WhatsApp Thembani"><span>⌕</span></a>
 
   <div class="modal" id="vehicleModal" aria-hidden="true">
