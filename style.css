@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+:root{
+ --black:#050505;
+ --dark:#111;
+ --card:#161616;
+ --gold:#d6a84f;
+ --white:#fff;
+ --gray:#aaa;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:'Inter',sans-serif;
+ scroll-behavior:smooth;
+}
+
+body{
+ background:
+ radial-gradient(circle at top,#222,#050505 50%);
+ color:white;
+ overflow-x:hidden;
+}
+
+
+/* NAVIGATION */
+
+header{
+ position:fixed;
+ top:0;
+ width:100%;
+ z-index:999;
+ backdrop-filter:blur(15px);
+ background:rgba(0,0,0,.65);
+ border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+
+nav{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:20px 8%;
+}
+
+
+.logo{
+ font-size:28px;
+ font-weight:900;
+ letter-spacing:2px;
+ color:white;
+}
+
+
+.logo span{
+ color:var(--gold);
+}
+
+
+nav a{
+ color:white;
+ text-decoration:none;
+ margin-left:25px;
+ transition:.3s;
+}
+
+
+nav a:hover{
+ color:var(--gold);
+}
+
+
+/* HERO */
+
+.hero{
+
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ padding:120px 8% 50px;
+
+ background:
+ linear-gradient(
+ rgba(0,0,0,.5),
+ rgba(0,0,0,.9)
+ ),
+ url("hero-car.jpg");
+
+ background-size:cover;
+ background-position:center;
+
+}
+
+
+.hero h1{
+
+ font-size:clamp(45px,7vw,90px);
+ font-weight:900;
+ line-height:1;
+
+ animation:slideUp 1s ease;
+
+}
+
+
+.hero h1 span{
+ color:var(--gold);
+}
+
+
+.hero p{
+
+margin:25px 0;
+font-size:20px;
+color:#ddd;
+max-width:600px;
+
+}
+
+
+.btn{
+
+display:inline-block;
+padding:16px 35px;
+background:var(--gold);
+color:black;
+font-weight:800;
+border-radius:50px;
+text-decoration:none;
+transition:.4s;
+
+}
+
+
+.btn:hover{
+
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 20px 40px rgba(214,168,79,.4);
+
+}
+
+
+
+/* VEHICLE CARDS */
+
+
+.vehicle-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:80px 8%;
+
+}
+
+
+.vehicle-card{
+
+background:
+linear-gradient(145deg,#1c1c1c,#090909);
+
+border-radius:25px;
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+transform-style:preserve-3d;
+
+transition:.5s;
+
+}
+
+
+.vehicle-card:hover{
+
+transform:
+translateY(-15px)
+rotateX(5deg);
+
+box-shadow:
+0 30px 60px rgba(0,0,0,.8);
+
+}
+
+
+
+.vehicle-image{
+
+height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+linear-gradient(135deg,#222,#000);
+
+font-size:40px;
+font-weight:900;
+
+}
+
+
+.vehicle-image small{
+
+position:absolute;
+opacity:.4;
+
+}
+
+
+.vehicle-content{
+
+padding:25px;
+
+}
+
+
+.vehicle-content h3{
+
+font-size:28px;
+
+}
+
+
+.price{
+
+color:var(--gold);
+font-size:22px;
+font-weight:800;
+
+}
+
+
+/* GLASS SECTIONS */
+
+
+section{
+
+padding:90px 8%;
+
+}
+
+
+.glass{
+
+background:rgba(255,255,255,.05);
+border-radius:30px;
+padding:50px;
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+/* ANIMATION */
+
+
+.reveal{
+
+opacity:0;
+transform:translateY(60px);
+
+transition:
+1s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.reveal.active{
+
+opacity:1;
+transform:none;
+
+}
+
+
+
+@keyframes slideUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero{
+text-align:center;
+}
+
+}
