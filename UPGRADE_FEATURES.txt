@@ -1,0 +1,38 @@
+THEMBANI OMODA & JAECOO SALES PLATFORM - UPGRADE PACK
+
+Added sales-growth modules planned for integration:
+
+1. Finance calculator
+- Customer enters deposit, term and estimated interest.
+- Shows estimated monthly payment.
+- Sends finance enquiry to WhatsApp.
+
+2. Trade-in valuation lead capture
+- Captures current vehicle details.
+- Creates a WhatsApp valuation request.
+
+3. Stock enquiry system
+- Model selection.
+- Availability request.
+- Test drive request.
+
+4. Customer trust section
+- Testimonials.
+- Delivery photos.
+- Customer journey stories.
+
+5. Digital brochures section
+- Add PDF brochures for C5, C7, J7 and J8.
+
+6. Analytics ready
+- Add Google Analytics / Meta Pixel.
+- Track WhatsApp clicks.
+- Track consultation submissions.
+
+7. POPIA readiness
+- Add consent checkbox.
+- Privacy notice.
+- Secure lead storage when backend is connected.
+
+Recommended next production step:
+Connect the website to a CRM/database so every lead from the forms is stored automatically instead of only opening WhatsApp.
