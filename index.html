@@ -143,19 +143,17 @@
   <footer><div class="footer-brand">OMODA <i></i> JAECOO <small>BOKSBURG · THEMBANI</small></div><div>© <span id="year"></span> Thembani. Independent sales contact for OMODA & JAECOO Boksburg.</div><a href="#top">Back to top ↑</a></footer>
 <script src="script.js"></script>
 
-<section id="finance" class="finance reveal">
-<h2>Vehicle Finance Calculator</h2>
-<p>Estimate your monthly payment and send the calculation directly to Thembani.</p>
-<select id="financeVehicle">
-<option>OMODA C5</option><option>OMODA C7</option><option>JAECOO J7</option><option>JAECOO J8</option>
-</select>
-<input id="vehiclePrice" placeholder="Vehicle price">
+<!doctype html>
+<html><head><title>Thembani Finance Calculator</title></head>
+<body>
+<h1>Finance Calculator</h1>
+<select id="vehicle"><option>OMODA C5</option><option>OMODA C7</option><option>JAECOO J7</option><option>JAECOO J8</option></select>
+<input id="price" placeholder="Vehicle price">
 <input id="deposit" placeholder="Deposit">
-<select id="term"><option value="72">72 Months</option><option value="60">60 Months</option></select>
-<button class="btn" onclick="calculateFinance()">Calculate</button>
-<h3 id="paymentResult"></h3>
-<button class="btn" onclick="sendFinanceWhatsApp()">Send to Thembani</button>
-</section>
+<input id="months" value="72">
+<button onclick="calculate()">Calculate</button>
+<h2 id="result"></h2>
+<script src="finance.js"></script>
   
 <section class="crm reveal">
   <a href="#" class="floating-wa" data-wa="general" aria-label="WhatsApp Thembani"><span>⌕</span></a>
