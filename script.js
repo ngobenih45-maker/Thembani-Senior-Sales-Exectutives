@@ -166,3 +166,25 @@ nav.style.boxShadow="none";
 }
 
 });
+let reviews =
+document.querySelectorAll(".testimonial");
+
+
+let current=0;
+
+
+setInterval(()=>{
+
+reviews[current].classList.remove("active");
+
+
+current++;
+
+if(current>=reviews.length)
+current=0;
+
+
+reviews[current].classList.add("active");
+
+
+},4000);
