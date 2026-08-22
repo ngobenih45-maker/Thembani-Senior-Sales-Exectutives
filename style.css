@@ -331,3 +331,50 @@ text-align:center;
     transform:scale(1.15);
 
 }
+.whatsapp{
+
+position:fixed;
+right:25px;
+bottom:25px;
+
+background:#25D366;
+color:white;
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:900;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 30px rgba(37,211,102,.5);
+
+animation:pulse 2s infinite;
+
+z-index:999;
+
+}
+
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.12);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
