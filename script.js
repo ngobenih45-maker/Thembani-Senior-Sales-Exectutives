@@ -128,3 +128,180 @@ function calculateVehiclePayment(price, deposit, months, rate){
   return amount * monthlyRate * Math.pow(1+monthlyRate, months) /
     (Math.pow(1+monthlyRate, months)-1);
 }
+const vehicleData = {
+
+
+"OMODA C5":{
+
+gallery:[
+"assets/c5-1.jpg",
+"assets/c5-2.jpg",
+"assets/c5-3.jpg",
+"assets/c5-4.jpg"
+],
+
+title:"OMODA C5",
+
+description:
+"Premium compact SUV with sporty styling, intelligent technology and efficient performance.",
+
+
+specs:[
+
+"1.5 Turbo Petrol Engine",
+"115kW Power",
+"230Nm Torque",
+"CVT Transmission",
+"Apple CarPlay & Android Auto",
+"Advanced Safety Features"
+
+],
+
+
+features:[
+
+"Premium interior design",
+"Smart connectivity",
+"Driver assistance technology",
+"Comfort-focused cabin"
+
+]
+
+},
+
+
+
+"OMODA C7":{
+
+
+gallery:[
+
+"assets/c7-1.jpg",
+"assets/c7-2.jpg",
+"assets/c7-3.jpg",
+"assets/c7-4.jpg"
+
+],
+
+
+title:"OMODA C7",
+
+description:
+"Luxury technology SUV offering powerful performance and advanced hybrid capability.",
+
+
+specs:[
+
+"1.6 TGDI Engine",
+"145kW Power",
+"290Nm Torque",
+"SHS Hybrid Available",
+"Large Digital Display",
+"Premium Sound System"
+
+],
+
+
+features:[
+
+"Panoramic sunroof",
+"Luxury cabin",
+"Intelligent driving systems",
+"Hybrid efficiency"
+
+]
+
+
+},
+
+
+
+"JAECOO J7":{
+
+
+gallery:[
+
+"assets/j7-1.jpg",
+"assets/j7-2.jpg",
+"assets/j7-3.jpg",
+"assets/j7-4.jpg"
+
+],
+
+
+title:"JAECOO J7",
+
+description:
+"Urban adventure SUV combining luxury comfort with off-road capability.",
+
+
+specs:[
+
+"1.6 TGDI Engine",
+"145kW Power",
+"290Nm Torque",
+"7 Driving Modes",
+"AWD Available",
+"7DCT Transmission"
+
+],
+
+
+features:[
+
+"Intelligent AWD",
+"Premium interior",
+"Adventure capability",
+"Advanced safety technology"
+
+]
+
+},
+
+
+
+
+"JAECOO J8":{
+
+
+gallery:[
+
+"assets/j8-1.jpg",
+"assets/j8-2.jpg",
+"assets/j8-3.jpg",
+"assets/j8-4.jpg"
+
+],
+
+
+title:"JAECOO J8",
+
+description:
+"Flagship luxury SUV built for performance, comfort and confidence.",
+
+
+specs:[
+
+"2.0 TGDI Engine",
+"7DCT Automatic",
+"AWD System",
+"Premium Cabin",
+"Advanced Driver Assistance",
+"Luxury SUV Experience"
+
+],
+
+
+features:[
+
+"Large touchscreen system",
+"Premium leather interior",
+"Powerful turbo performance",
+"All-road capability"
+
+]
+
+
+}
+
+};
