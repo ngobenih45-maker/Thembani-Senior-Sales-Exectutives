@@ -101,7 +101,43 @@ position:relative;
 overflow:hidden;
 
 }
+.hero::before{
 
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+url("images/hero-banner.png");
+
+background-size:cover;
+background-position:center;
+
+z-index:-1;
+
+animation:
+heroZoom 15s infinite alternate;
+
+}
+
+
+@keyframes heroZoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.12);
+
+}
+
+}
 
 .hero h1{
 
