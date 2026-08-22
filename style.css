@@ -309,3 +309,25 @@ text-align:center;
 }
 
 }
+.vehicle-image{
+    height:260px;
+    overflow:hidden;
+    border-radius:25px 25px 0 0;
+}
+
+.vehicle-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:transform 8s ease;
+
+}
+
+
+.vehicle-card:hover .vehicle-image img{
+
+    transform:scale(1.15);
+
+}
