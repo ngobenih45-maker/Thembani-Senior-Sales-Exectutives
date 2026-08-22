@@ -378,3 +378,46 @@ transform:scale(1);
 }
 
 }
+.testimonials{
+
+text-align:center;
+
+}
+
+
+.testimonial{
+
+display:none;
+
+background:
+rgba(255,255,255,.06);
+
+padding:40px;
+
+border-radius:25px;
+
+}
+
+
+.testimonial.active{
+
+display:block;
+
+animation:fade .8s;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+}
+
+}
