@@ -1,0 +1,22 @@
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#050912;color:#fff}
+.hero{min-height:100vh;padding:30px;background:radial-gradient(circle,#12345d,#02050b);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#007cff;opacity:.15;animation:spin 8s linear infinite}
+nav{display:flex;justify-content:space-between;position:relative;z-index:2}
+.logo{font-size:28px;letter-spacing:8px;font-weight:bold}
+nav a,.btn{background:#087cff;color:#fff;padding:15px 28px;border-radius:40px;text-decoration:none}
+.hero-text{position:relative;z-index:2;max-width:800px;margin:140px auto;text-align:center}
+.hero-text span{color:#31a7ff}
+h1{font-size:60px}
+section{padding:70px 8%}
+.grid,.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.stats div,.card{background:#101b30;padding:30px;border-radius:20px;text-align:center;border:1px solid #164c91;transition:.5s}
+.card:hover{transform:translateY(-15px);box-shadow:0 0 35px #087cff}
+.car a{color:#31a7ff}
+form{max-width:600px;margin:auto;display:grid;gap:15px}
+input,select,textarea,button{padding:16px;border-radius:12px;border:0}
+button{background:#087cff;color:#fff}
+.contact{text-align:center}
+footer{text-align:center;padding:25px;background:#02050b}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@media(max-width:700px){h1{font-size:38px}}

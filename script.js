@@ -1,0 +1,1 @@
+document.querySelectorAll('.card').forEach(c=>c.style.animation='fade 1s ease');
