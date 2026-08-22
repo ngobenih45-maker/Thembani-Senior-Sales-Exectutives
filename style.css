@@ -493,3 +493,166 @@ border-radius:10px;
 margin:20px;
 
 }
+/* =========================
+   MOBILE OPTIMISATION
+========================= */
+
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+/* HERO MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+
+min-height:90vh;
+
+padding:
+120px 25px 60px;
+
+background-position:center;
+
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-size:42px;
+line-height:1.1;
+
+}
+
+
+.hero p{
+
+font-size:16px;
+
+}
+
+
+.hero .btn{
+
+display:block;
+
+width:100%;
+
+margin:12px 0;
+
+}
+
+
+
+/* NAVIGATION */
+
+nav{
+
+padding:15px 20px;
+
+}
+
+
+nav a{
+
+display:none;
+
+}
+
+
+.logo{
+
+font-size:22px;
+
+}
+
+
+
+/* VEHICLES */
+
+
+.vehicle-grid{
+
+grid-template-columns:1fr;
+
+padding:40px 20px;
+
+gap:25px;
+
+}
+
+
+.vehicle-card{
+
+border-radius:20px;
+
+}
+
+
+
+.vehicle-image{
+
+height:220px;
+
+}
+
+
+
+/* TESTIMONIALS */
+
+.testimonial{
+
+padding:25px;
+
+font-size:15px;
+
+}
+
+
+
+/* AI SECTION */
+
+.ai-box{
+
+padding:30px 20px;
+
+}
+
+
+.ai-box h2{
+
+font-size:28px;
+
+}
+
+
+
+/* POPUP */
+
+.popup-box{
+
+width:90%;
+
+padding:25px;
+
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+
+width:58px;
+height:58px;
+
+right:15px;
+bottom:15px;
+
+}
+
+}
