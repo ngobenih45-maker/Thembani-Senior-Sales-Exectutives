@@ -421,3 +421,30 @@ opacity:1;
 }
 
 }
+.ai-box{
+
+text-align:center;
+
+background:
+linear-gradient(145deg,#181818,#050505);
+
+border-radius:35px;
+
+padding:60px;
+
+}
+
+
+.ai-box select{
+
+padding:15px;
+
+background:#222;
+
+color:white;
+
+border-radius:10px;
+
+margin:20px;
+
+}
