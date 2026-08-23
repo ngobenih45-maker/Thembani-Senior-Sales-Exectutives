@@ -1064,3 +1064,23 @@ font-size:11px;
 
 
 }
+@media(max-width:768px){
+
+nav.open a{
+
+display:block;
+
+margin:15px 0;
+
+}
+
+
+nav.open{
+
+background:#080808;
+
+padding-bottom:30px;
+
+}
+
+}
