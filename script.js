@@ -1,4 +1,10 @@
-// Scroll reveal animation
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+/* ==========================
+SCROLL REVEAL
+========================== */
+
 
 const reveals =
 document.querySelectorAll(".reveal");
@@ -8,14 +14,12 @@ function reveal(){
 
 reveals.forEach(item=>{
 
-let windowHeight =
-window.innerHeight;
-
-let top =
+const position =
 item.getBoundingClientRect().top;
 
 
-if(top < windowHeight - 100){
+if(position <
+window.innerHeight - 100){
 
 item.classList.add("active");
 
@@ -31,16 +35,25 @@ window.addEventListener(
 reveal
 );
 
+
 reveal();
 
 
 
+/* ==========================
+VEHICLE 3D EFFECT
+DESKTOP ONLY
+========================== */
 
-// Vehicle 3D movement
 
-document
-.querySelectorAll(".vehicle-card")
-.forEach(card=>{
+const cards =
+document.querySelectorAll(".vehicle-card");
+
+
+if(window.innerWidth > 768){
+
+
+cards.forEach(card=>{
 
 
 card.addEventListener(
@@ -48,29 +61,29 @@ card.addEventListener(
 (e)=>{
 
 
-let rect =
+const box =
 card.getBoundingClientRect();
 
 
-let x =
-e.clientX - rect.left;
+const x =
+e.clientX-box.left;
 
 
-let y =
-e.clientY - rect.top;
+const y =
+e.clientY-box.top;
 
 
-let rotateY =
-(x-rect.width/2)/15;
+const rotateY =
+(x-box.width/2)/20;
 
 
-let rotateX =
--(y-rect.height/2)/15;
+const rotateX =
+-(y-box.height/2)/20;
 
 
 card.style.transform=
 `
-perspective(700px)
+perspective(800px)
 rotateX(${rotateX}deg)
 rotateY(${rotateY}deg)
 translateY(-15px)
@@ -87,12 +100,18 @@ card.style.transform="";
 
 });
 
+
 });
 
 
+}
 
 
-// Animated counters
+
+/* ==========================
+COUNTER ANIMATION
+========================== */
+
 
 const counters =
 document.querySelectorAll(".counter");
@@ -101,35 +120,55 @@ document.querySelectorAll(".counter");
 counters.forEach(counter=>{
 
 
-let target =
-+counter.dataset.target;
+let started=false;
+
+
+function startCounter(){
+
+
+if(started)return;
+
+
+started=true;
+
+
+const target =
+Number(counter.dataset.target);
 
 
 let count=0;
 
 
-let speed=
-target/100;
+const speed =
+target/80;
+
 
 
 function update(){
 
+
 if(count < target){
 
-count+=speed;
 
-counter.innerHTML=
+count += speed;
+
+
+counter.textContent =
 Math.ceil(count);
 
+
 requestAnimationFrame(update);
+
 
 }
 
 else{
 
-counter.innerHTML=target;
+counter.textContent =
+target;
 
 }
+
 
 }
 
@@ -137,37 +176,84 @@ counter.innerHTML=target;
 update();
 
 
-});
+}
 
 
-
-
-// Navbar shadow
 
 window.addEventListener(
 "scroll",
 ()=>{
 
-let nav =
+
+const top =
+counter.getBoundingClientRect().top;
+
+
+if(top <
+window.innerHeight){
+
+startCounter();
+
+}
+
+
+});
+
+
+});
+
+
+
+/* ==========================
+NAVBAR EFFECT
+========================== */
+
+
+const header =
 document.querySelector("header");
 
 
-if(window.scrollY>50){
+window.addEventListener(
+"scroll",
+()=>{
 
-nav.style.boxShadow=
-"0 10px 40px #000";
+
+if(!header)return;
+
+
+if(window.scrollY>60){
+
+
+header.style.boxShadow =
+"0 15px 40px rgba(0,0,0,.7)";
+
 
 }
 
 else{
 
-nav.style.boxShadow="none";
+
+header.style.boxShadow =
+"none";
+
 
 }
 
+
 });
-let reviews =
+
+
+
+/* ==========================
+TESTIMONIAL SLIDER
+========================== */
+
+
+const reviews =
 document.querySelectorAll(".testimonial");
+
+
+if(reviews.length > 0){
 
 
 let current=0;
@@ -175,63 +261,130 @@ let current=0;
 
 setInterval(()=>{
 
-reviews[current].classList.remove("active");
+
+reviews[current]
+.classList.remove("active");
 
 
 current++;
 
-if(current>=reviews.length)
+
+if(current >= reviews.length){
+
 current=0;
 
+}
 
-reviews[current].classList.add("active");
+
+
+reviews[current]
+.classList.add("active");
 
 
 },4000);
-function recommend(){
 
-let choice =
-document.getElementById("need").value;
+
+}
+
+
+
+/* ==========================
+AI VEHICLE RECOMMENDER
+========================== */
+
+
+window.recommend=function(){
+
+
+const need =
+document.getElementById("need");
+
+
+const answer =
+document.getElementById("answer");
+
+
+if(!need || !answer)return;
+
 
 
 let result="";
 
 
-if(choice==="family"){
+switch(need.value){
 
-result="Recommended: OMODA C5 - Spacious, safe and comfortable.";
+
+case "family":
+
+result=
+"Recommended: OMODA C5 - Spacious, safe and comfortable for family journeys.";
+
+break;
+
+
+
+case "luxury":
+
+result=
+"Recommended: JAECOO J7 - Premium technology, comfort and intelligent driving.";
+
+break;
+
+
+
+case "economy":
+
+result=
+"Recommended: OMODA Hybrid - Efficient performance and modern technology.";
+
+break;
+
+
+
+default:
+
+result=
+"Please select your driving preference.";
+
+}
+
+
+
+answer.textContent=result;
+
 
 }
 
-else if(choice==="luxury"){
-
-result="Recommended: JAECOO J7 - Premium technology and style.";
-
-}
-
-else if(choice==="economy"){
-
-result="Recommended: OMODA C5 Hybrid - Efficient and modern.";
-
-}
-
-else{
-
-result="Please select your driving needs.";
-
-}
 
 
-document.getElementById(
-"answer"
-).innerHTML=result;
+/* ==========================
+MOBILE MENU
+========================== */
 
 
-}
-document.querySelector(".menu-btn")
-.onclick=function(){
+const menu =
+document.querySelector(".menu-btn");
 
-document.querySelector("nav")
-.classList.toggle("open");
+
+const nav =
+document.querySelector("nav");
+
+
+if(menu && nav){
+
+
+menu.addEventListener(
+"click",
+()=>{
+
+
+nav.classList.toggle("open");
+
+
+});
 
 }
+
+
+
+});
