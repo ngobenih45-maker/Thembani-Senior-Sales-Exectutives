@@ -467,3 +467,55 @@ whatsappURL,
 
 
 }
+const next =
+document.querySelector(".next-step");
+
+const prev =
+document.querySelector(".prev-step");
+
+
+const steps =
+document.querySelectorAll(".form-step");
+
+
+let currentStep=0;
+
+
+
+if(next){
+
+next.onclick=function(){
+
+steps[currentStep]
+.classList.remove("active");
+
+
+currentStep++;
+
+
+steps[currentStep]
+.classList.add("active");
+
+};
+
+}
+
+
+
+if(prev){
+
+prev.onclick=function(){
+
+steps[currentStep]
+.classList.remove("active");
+
+
+currentStep--;
+
+
+steps[currentStep]
+.classList.add("active");
+
+};
+
+}
