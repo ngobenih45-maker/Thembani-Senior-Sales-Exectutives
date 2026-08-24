@@ -388,3 +388,82 @@ nav.classList.toggle("open");
 
 
 });
+
+const leadForm =
+document.getElementById("leadForm");
+
+
+if(leadForm){
+
+leadForm.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+
+const formData =
+new FormData(leadForm);
+
+
+const name =
+formData.get("name");
+
+const model =
+formData.get("model");
+
+const intent =
+formData.get("intent");
+
+const time =
+formData.get("time");
+
+const phone =
+formData.get("phone");
+
+const message =
+formData.get("message");
+
+
+
+const whatsappMessage =
+
+`Hello Thembani, I am interested in a vehicle.
+
+Name: ${name}
+
+Vehicle:
+${model}
+
+Enquiry:
+${intent}
+
+Best contact time:
+${time}
+
+My number:
+${phone}
+
+Message:
+${message}`;
+
+
+
+const whatsappURL =
+
+"https://wa.me/27612657558?text="
++
+encodeURIComponent(whatsappMessage);
+
+
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+
+});
+
+
+}
