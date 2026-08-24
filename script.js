@@ -519,3 +519,70 @@ steps[currentStep]
 };
 
 }
+const tradeForm =
+document.getElementById("tradeIn");
+
+
+if(tradeForm){
+
+tradeForm.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+
+const data =
+new FormData(tradeForm);
+
+
+const make =
+data.get("make");
+
+const model =
+data.get("model");
+
+const year =
+data.get("year");
+
+const mileage =
+data.get("mileage");
+
+
+
+const message =
+
+`Hi Thembani, I would like a trade-in valuation.
+
+Vehicle Make:
+${make}
+
+Model:
+${model}
+
+Year:
+${year}
+
+Mileage:
+${mileage}
+
+Please assist me with a valuation.`;
+
+
+const whatsapp =
+"https://wa.me/27612657558?text="
++
+encodeURIComponent(message);
+
+
+
+window.open(
+whatsapp,
+"_blank"
+);
+
+
+});
+
+
+}
